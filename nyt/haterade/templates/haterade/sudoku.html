@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>NYT WTF: Sudoku</title>
+    <link rel="stylesheet" href="{% static 'haterade/haterade.css' %}"/>
+</head>
+<body>
+
+
+<div class="header">
+    <div class="unselected"><a href="/spelling-bee/">Spelling Bee</a></div>
+    <div class="unselected"><a href="/connections/">Connections</a></div>
+    <div class="unselected"><a href="/wordle/">Wordle</a></div>
+    <div class="selected"><a href="/sudoku/">Sudoku</a></div>
+    <div class="unselected"><a href="/strands/">Strands</a></div>
+</div>
+
+<h2>The solutions for {{date}} are...</h2>
+
+
+<h2>Easy</h2>
+<div class="sudoku-board-container">
+    {% for tile in sudoku.easy %}
+        {% if tile.given %}
+            <div class="sudoku-tile-given">{{tile.number}}</div>
+        {% else %}
+            <div class="sudoku-tile-solved">{{tile.number}}</div>
+        {% endif %}
+    {% endfor %}
+</div>
+
+<h2>Medium</h2>
+<div class="sudoku-board-container">
+    {% for tile in sudoku.medium %}
+        {% if tile.given %}
+            <div class="sudoku-tile-given">{{tile.number}}</div>
+        {% else %}
+            <div class="sudoku-tile-solved">{{tile.number}}</div>
+        {% endif %}
+    {% endfor %}
+</div>
+
+
+<h2>Hard</h2>
+<div class="sudoku-board-container">
+    {% for tile in sudoku.hard %}
+        {% if tile.given %}
+            <div class="sudoku-tile-given">{{tile.number}}</div>
+        {% else %}
+            <div class="sudoku-tile-solved">{{tile.number}}</div>
+        {% endif %}
+    {% endfor %}
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+asgiref==3.8.1
+beautifulsoup4==4.12.3
+certifi==2024.8.30
+charset-normalizer==3.3.2
+Django==4.2.3
+idna==3.10
+pytz==2024.2
+requests==2.32.3
+soupsieve==2.6
+sqlparse==0.5.1
+urllib3==2.2.3
+gunicorn==21.2.0
+psycopg2-binary==2.9.6
+pydantic==2.9.2
+pydantic_core==2.23.4
+python-dateutil==2.9.0.post0

@@ -1,0 +1,162 @@
+html {
+  max-width: 70ch;
+  padding: 3em 1em;
+  margin: auto;
+  line-height: 1.75;
+  font-size: 1.25em;
+}
+
+body {
+    font-family: Courier, monospace;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+}
+
+.selected,
+.unselected {
+    height: auto;
+    width: auto;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.selected a,
+.unselected a {
+    text-decoration: none;
+}
+
+.selected {
+    background-color: darkgray;
+}
+
+.unselected {
+    background-color: lightgray;
+}
+
+.selected a {
+    color: black;
+}
+
+.unselected a {
+    color: white;
+}
+
+.selected a:hover,
+.unselected a:hover {
+    color: magenta;
+}
+
+
+.wordle-container {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.wordle-tile {
+    height: 75px;
+    width: 75px;
+    margin: 2px;
+    background-color: limegreen;
+    color: white;
+    line-height: 75px;
+    text-align: center;
+    font-family: monospace;
+    font-size: 24pt;
+}
+
+.connections-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.connections-card-1,
+.connections-card-2,
+.connections-card-3,
+.connections-card-4 {
+    height: auto;
+    width: auto;
+    background-color: lightgrey;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+
+}
+
+.connections-tile {
+    height: auto;
+    width: auto;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    color: black;
+}
+
+.connections-card-1 .connections-tile {
+    background-color: khaki;
+}
+
+.connections-card-2 .connections-tile {
+    background-color: yellowgreen;
+}
+
+.connections-card-3 .connections-tile {
+    background-color: paleturquoise;
+}
+
+.connections-card-4 .connections-tile {
+    background-color: darkorchid;
+}
+
+.spelling-bee {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.sudoku-board-container {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: calc(32px*9);
+    background-color: 'limegreen';
+    border: 1px solid black;
+}
+
+.sudoku-tile-given,
+.sudoku-tile-solved {
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+    line-height: 30px;
+    text-align: center;
+}
+
+.sudoku-tile-given {
+    background-color: lightgray;
+}
+
+.sudoku-tile-solved {
+    background-color: white;
+}
+
+.strands-clue {
+    color: black;
+}
+
+.strands-tile {
+    background-color: darkorchid;
+    color: white;
+    height: 50px;
+    width: auto;
+    line-height: 50px;
+    text-align: center;
+    margin: 5px;
+
+}

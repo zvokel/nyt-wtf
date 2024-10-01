@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>NYT WTF: Connections</title>
+    <link rel="stylesheet" href="{% static 'haterade/haterade.css' %}"/>
+</head>
+<body>
+
+
+<div class="header">
+    <div class="unselected"><a href="/spelling-bee/">Spelling Bee</a></div>
+    <div class="unselected"><a href="/connections/">Connections</a></div>
+    <div class="unselected"><a href="/wordle/">Wordle</a></div>
+    <div class="unselected"><a href="/sudoku/">Sudoku</a></div>
+    <div class="selected"><a href="/strands/">Strands</a></div>
+</div>
+
+<div class="strands-clue">
+<h2>{{date}} {{strands.clue}}...</h2>
+</div>
+    {% for word in strands.themeWords %}
+    <div class="strands-tile"> {{word}} </div>
+{% endfor %}
+
+<h2>Solution: {{ strands.spangram}}</h2>
+
+</body>
+</html>
